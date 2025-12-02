@@ -1,5 +1,5 @@
 {
-  "name": "my-turborepo",
+  "name": "jagisingh-landingpage-projects-monorepo",
   "private": true,
   "scripts": {
     "build": "turbo run build",
