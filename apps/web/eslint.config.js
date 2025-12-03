@@ -1,4 +1,15 @@
-import { nextJsConfig } from "@repo/eslint-config/next-js";
+import { nextJsConfig } from '@repo/eslint-config/next-js';
+import globals from 'globals';
 
 /** @type {import("eslint").Linter.Config[]} */
-export default nextJsConfig;
+export default [
+  ...nextJsConfig,
+  {
+    files: ['next.config.js'],
+    languageOptions: {
+      globals: {
+        ...globals.node, // Enable all Node.js global variables
+      },
+    },
+  },
+];
