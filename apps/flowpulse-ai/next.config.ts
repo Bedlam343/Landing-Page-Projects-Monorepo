@@ -1,11 +1,11 @@
-import type { NextConfig } from 'next';
 import { BASE_URL } from '@/utils/constants';
+import type { NextConfig } from 'next';
 
 const nextConfig: NextConfig = {
   basePath: BASE_URL,
   trailingSlash: true,
   images: {
-    domains: ['placehold.co', 'images.unsplash.com'], // Add the specific hostname here
+    domains: ['i.pravatar.cc'], // Add the specific hostname here
   },
 };
 
