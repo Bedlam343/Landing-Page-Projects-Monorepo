@@ -1,6 +1,7 @@
 import Image from 'next/image';
 import Link from 'next/link';
 import { Star, Calendar, Phone } from 'lucide-react';
+import { BASE_URL } from '@/utils/constants';
 
 const Hero = () => {
   return (
@@ -67,7 +68,7 @@ const Hero = () => {
         {/* Hero Image */}
         <div className="relative h-[400px] md:h-[600px] rounded-3xl overflow-hidden shadow-2xl border-8 border-white">
           <Image
-            src="/images/girls_smiling.png"
+            src={`${BASE_URL}/images/girls_smiling.png`}
             alt="Friendly dentist treating a patient at Bloom Dental Care"
             fill
             priority

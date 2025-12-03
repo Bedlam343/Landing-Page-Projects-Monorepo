@@ -1,7 +1,9 @@
 import type { NextConfig } from 'next';
 
+const BASE_PATH = '/bloom-dental';
+
 const nextConfig: NextConfig = {
-  basePath: '/bloom-dental',
+  basePath: BASE_PATH,
   trailingSlash: true,
   images: {
     domains: ['placehold.co', 'images.unsplash.com'], // Add the specific hostname here

@@ -1,18 +1,19 @@
 import Image from 'next/image';
 import { ArrowUpRight } from 'lucide-react';
+import { BASE_URL } from '@/utils/constants';
 
 // Service Data with specific grid spans for the "Bento" look
 const services = [
   {
     title: 'General Dentistry',
     desc: 'Comprehensive exams, cleanings, and preventative care for long-term health.',
-    image: '/images/general_dentistry.png',
+    image: `${BASE_URL}/images/general_dentistry.png`,
     colSpan: 'md:col-span-2', // Wide card
   },
   {
     title: 'Cosmetic Veneers',
     desc: 'Transform your smile with custom-crafted porcelain veneers.',
-    image: '/images/veneers.png',
+    image: `${BASE_URL}/images/veneers.png`,
     colSpan: 'md:col-span-1', // Standard card
   },
   {
@@ -25,13 +26,13 @@ const services = [
   {
     title: 'Dental Implants',
     desc: 'Permanent, natural-looking solutions for missing teeth.',
-    image: '/images/dental_implants.png',
+    image: `${BASE_URL}/images/dental_implants.png`,
     colSpan: 'md:col-span-1', // Standard card
   },
   {
     title: 'Teeth Whitening',
     desc: 'Professional in-office whitening for instant brightness.',
-    image: '/images/smiling_man_white_teeth.jpg',
+    image: `${BASE_URL}/images/smiling_man_white_teeth.jpg`,
     colSpan: 'md:col-span-2', // Wide card
   },
   {

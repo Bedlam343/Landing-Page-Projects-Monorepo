@@ -2,6 +2,7 @@
 import { useState } from 'react';
 import Image from 'next/image';
 import { ReactCompareSlider } from 'react-compare-slider';
+import { BASE_URL } from '@/utils/constants';
 
 const BeforeAfter = () => {
   const [activeTab, setActiveTab] = useState<'before' | 'after'>('before');
@@ -29,7 +30,7 @@ const BeforeAfter = () => {
           itemOne={
             <div className="relative aspect-4/3 w-full rounded-2xl overflow-hidden shadow-2xl bg-gray-800">
               <Image
-                src="/images/teeth_before.png"
+                src={`${BASE_URL}/images/teeth_before.png`}
                 alt="Teeth before treatment"
                 fill
                 className="object-cover animate-in fade-in duration-500"
@@ -39,7 +40,7 @@ const BeforeAfter = () => {
           itemTwo={
             <div className="relative aspect-4/3 w-full rounded-2xl overflow-hidden shadow-2xl bg-gray-800">
               <Image
-                src="/images/teeth_after.png"
+                src={`${BASE_URL}/images/teeth_after.png`}
                 alt="Teeth after treatment"
                 fill
                 className="object-cover animate-in fade-in duration-500"
