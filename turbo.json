@@ -6,7 +6,7 @@
       "dependsOn": ["^build"],
       "inputs": ["$TURBO_DEFAULT$", ".env*"],
       "outputs": [".next/**", "!.next/cache/**"],
-      "env": ["BLOOM_BASE_URL", "FLOWPULSE_BASE_URL"]
+      "env": ["BLOOM_BASE_URL", "FLOWPULSE_BASE_URL", "CAMPUS_BAZAAR_BASE_URL"]
     },
     "lint": {
       "dependsOn": ["^lint"]
