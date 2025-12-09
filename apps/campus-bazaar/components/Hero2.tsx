@@ -1,12 +1,5 @@
-import React from 'react';
-import { motion } from 'framer-motion';
-import {
-  ArrowRight,
-  ShieldCheck,
-  MessageCircle,
-  Zap,
-  CheckCircle2,
-} from 'lucide-react';
+import { motion } from 'motion/react';
+import { ArrowRight, ShieldCheck, MessageCircle, Zap } from 'lucide-react';
 import Button from './ui/Button';
 import Badge from './ui/Badge';
 
