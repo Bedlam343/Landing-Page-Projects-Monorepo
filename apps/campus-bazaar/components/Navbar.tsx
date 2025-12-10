@@ -74,6 +74,7 @@ const Navbar = () => {
               key={id}
               onClick={() => handleScroll(id)}
               className="hover:text-white transition-colors"
+              aria-label={`Navigate to section ${name}`}
             >
               {name}
             </button>
@@ -91,6 +92,7 @@ const Navbar = () => {
         </div>
 
         <button
+          aria-label="Toggle Mobile Menu"
           className="md:hidden text-white"
           onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
         >
@@ -113,11 +115,16 @@ const Navbar = () => {
                   key={id}
                   onClick={() => handleScroll(id)}
                   className="text-slate-300 hover:text-white font-medium"
+                  aria-label={`Navigate to section ${name}`}
                 >
                   {name}
                 </button>
               ))}
-              <Button variant="primary" className="w-full justify-center">
+              <Button
+                ariaLabel="Join Now"
+                variant="primary"
+                className="w-full justify-center"
+              >
                 Join Now
               </Button>
             </div>

@@ -4,12 +4,14 @@ type ButtonProps = {
   children: React.ReactNode;
   variant?: 'primary' | 'secondary' | 'accent' | 'ghost';
   className?: string;
+  ariaLabel?: string;
 };
 
 const Button = ({
   children,
   variant = 'primary',
   className = '',
+  ariaLabel,
 }: ButtonProps) => {
   const baseStyle =
     'px-3 md:px-6 py-2 md:py-3 rounded-full font-bold transition-all flex items-center gap-2';
@@ -25,6 +27,7 @@ const Button = ({
 
   return (
     <motion.button
+      aria-label={ariaLabel}
       whileHover={{ scale: 1.05 }}
       whileTap={{ scale: 0.95 }}
       className={`${baseStyle} ${

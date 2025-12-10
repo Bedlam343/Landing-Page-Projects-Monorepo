@@ -59,6 +59,7 @@ const Footer = () => {
 
             <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
               <Button
+                ariaLabel="Create Free Account"
                 variant="accent"
                 className="h-14 px-10 text-lg sm:text-sm md:text-lg rounded-full 
                 shadow-[0_0_30px_-5px_rgba(251,191,36,0.4)] 
@@ -68,6 +69,7 @@ const Footer = () => {
                 Create Free Account
               </Button>
               <Button
+                ariaLabel="Browse Marketplace"
                 variant="secondary"
                 className="h-14 px-10 text-lg sm:text-sm md:text-lg rounded-full 
                 bg-slate-900/50 border-slate-700 hover:bg-slate-800
@@ -108,7 +110,11 @@ const Footer = () => {
                   placeholder="Enter your .edu email"
                   className="w-full bg-slate-900/50 border border-slate-700 rounded-xl py-3 pl-4 pr-12 text-slate-300 placeholder:text-slate-600 focus:outline-none focus:ring-2 focus:ring-indigo-500/50 focus:border-indigo-500 transition-all"
                 />
-                <button className="absolute right-2 top-1/2 -translate-y-1/2 p-2 bg-indigo-500 rounded-lg text-white hover:bg-indigo-400 transition-colors">
+                <button
+                  aria-label="Subscribe"
+                  className="absolute right-2 top-1/2 -translate-y-1/2 p-2 bg-indigo-500 rounded-lg text-white 
+                  hover:bg-indigo-400 transition-colors"
+                >
                   <Send size={14} />
                 </button>
               </div>
@@ -124,6 +130,7 @@ const Footer = () => {
                   <li key={item}>
                     <a
                       href="#"
+                      aria-label={`Navigate to ${item}`}
                       className="text-slate-400 hover:text-indigo-400 transition-colors text-sm"
                     >
                       {item}
@@ -140,6 +147,7 @@ const Footer = () => {
             <div className="flex gap-4">
               {[Twitter, Instagram, Linkedin, Github].map((Icon, i) => (
                 <a
+                  aria-label={`Follow us on ${Icon.name}`}
                   key={i}
                   href="#"
                   className="w-10 h-10 rounded-full bg-slate-900 border border-slate-700 flex items-center justify-center text-slate-400 hover:text-white hover:border-indigo-500 hover:bg-indigo-500/20 transition-all"
@@ -157,13 +165,25 @@ const Footer = () => {
             &copy; 2025 Campus Bazaar Inc. All rights reserved.
           </p>
           <div className="flex gap-8 text-sm text-slate-500">
-            <a href="#" className="hover:text-white transition-colors">
+            <a
+              href="#"
+              aria-label="Privacy Policy"
+              className="hover:text-white transition-colors"
+            >
               Privacy
             </a>
-            <a href="#" className="hover:text-white transition-colors">
+            <a
+              href="#"
+              aria-label="Terms of Service"
+              className="hover:text-white transition-colors"
+            >
               Terms
             </a>
-            <a href="#" className="hover:text-white transition-colors">
+            <a
+              href="#"
+              aria-label="Cookies Policy"
+              className="hover:text-white transition-colors"
+            >
               Cookies
             </a>
           </div>

@@ -127,7 +127,12 @@ const SmartSearch = () => {
                     {text}
                   </span>
                 </div>
-                <Button className="ml-2 text-sm md:text-base">Search</Button>
+                <Button
+                  ariaLabel="Search"
+                  className="ml-2 text-sm md:text-base"
+                >
+                  Search
+                </Button>
               </div>
             </div>
 

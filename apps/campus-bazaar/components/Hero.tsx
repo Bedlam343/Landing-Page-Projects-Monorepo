@@ -66,6 +66,7 @@ const HeroOptionA_Background = () => {
 
             <div className="flex flex-wrap gap-4 items-center">
               <Button
+                ariaLabel="Start Selling"
                 variant="accent"
                 className="text-lg px-8 py-4 shadow-amber-500/20 cursor-pointer"
               >
