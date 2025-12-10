@@ -12,7 +12,6 @@ const LAST_PROJECT_COOKIE = 'last_project';
 
 // An array of your project paths to check against
 const PROJECT_PATHS = ['/bloom-dental', '/flowpulse-ai', '/campus-bazaar'];
-const PROJECT_MATCHERS = PROJECT_PATHS.map((path) => `${path}/:path*`);
 // ---------------------
 
 export function middleware(request: NextRequest) {
@@ -70,7 +69,8 @@ export function middleware(request: NextRequest) {
 export const config = {
   matcher: [
     '/', // Match the root path
-    ...PROJECT_MATCHERS, // Match all project paths and their sub-paths
-    // This will match: '/', '/bloom-dental', '/flowpulse-ai/about', etc.
+    '/bloom-dental/:path*',
+    '/flowpulse-ai/:path*',
+    '/campus-bazaar/:path*',
   ],
 };
